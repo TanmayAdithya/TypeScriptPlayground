@@ -82,7 +82,7 @@ function getDays(a: DAYS): string {
   }
 }
 
-console.log(getDays(DAYS.Sunday));
+// console.log(getDays(DAYS.Sunday));
 
 // Union experiment
 
@@ -108,8 +108,8 @@ function useState(num1: number, num2: number, num3: number): number[] {
 }
 
 const [hello, setHello] = useState(0, 0, 0);
-console.log(hello);
-console.log(setHello);
+// console.log(hello);
+// console.log(setHello);
 
 let arr2 = ['tree', 'leaves', 'poo'];
 
@@ -124,3 +124,40 @@ function twoReturn(something: number) {
 
   return false;
 }
+
+//  Union
+// let num5: number | string;
+// num5 = '0';
+
+// if (num5 === '0') {
+//   console.log('Value is a string containing "0"');
+// } else {
+//   console.log('Value is not a string containing "0"');
+// }
+
+// let myArr = [1, 2, 3];
+// let newArr = [...myArr];
+// for (const num of newArr) {
+//   console.log(`Number : ${num}`);
+// }
+
+// let myMap = new Map<number, string>();
+
+// myMap.set(1, 'Hello');
+// myMap.set(2, 'Bollo');
+
+// for (const [key, value] of myMap.entries()) {
+//   console.log(`${key} : ${value}`);
+// }
+
+function getRef(arg: number): void {
+  console.log(arg + 1);
+}
+
+let nums = 7;
+
+getRef(nums);
+getRef(nums);
+getRef(nums);
+
+console.log(`Outside: ` + nums);

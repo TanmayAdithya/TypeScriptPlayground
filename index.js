@@ -58,7 +58,6 @@ function getDays(a) {
             throw new Error('Invalid Day');
     }
 }
-console.log(getDays(DAYS.Sunday));
 // Generics
 function genericFunction(num) {
     return num;
@@ -72,5 +71,42 @@ function useState(num1, num2, num3) {
     return [num1, num2, num3];
 }
 var _a = useState(0, 0, 0), hello = _a[0], setHello = _a[1];
-console.log(hello);
-console.log(setHello);
+// console.log(hello);
+// console.log(setHello);
+var arr2 = ['tree', 'leaves', 'poo'];
+arr2.map(function (ele) {
+    return "".concat(ele);
+});
+function twoReturn(something) {
+    if (something > 0) {
+        return 'hello';
+    }
+    return false;
+}
+//  Union
+// let num5: number | string;
+// num5 = '0';
+// if (num5 === '0') {
+//   console.log('Value is a string containing "0"');
+// } else {
+//   console.log('Value is not a string containing "0"');
+// }
+// let myArr = [1, 2, 3];
+// let newArr = [...myArr];
+// for (const num of newArr) {
+//   console.log(`Number : ${num}`);
+// }
+// let myMap = new Map<number, string>();
+// myMap.set(1, 'Hello');
+// myMap.set(2, 'Bollo');
+// for (const [key, value] of myMap.entries()) {
+//   console.log(`${key} : ${value}`);
+// }
+function getRef(arg) {
+    console.log(arg + 1);
+}
+var nums = 7;
+getRef(nums);
+getRef(nums);
+getRef(nums);
+console.log("Outside: " + nums);
